@@ -13,7 +13,7 @@ $(function(){
            layer.close(index);
         })
     })
-})
+});
 
 function getUserInfo(){
     $.ajax({
@@ -27,7 +27,7 @@ function getUserInfo(){
             renderAvatar(res.data);
         }
     })
-}
+};
 
 function renderAvatar(user){
     // 获取用户的名称
@@ -38,8 +38,11 @@ function renderAvatar(user){
         // 渲染图片头像
        $('.layui-nav-img').attr('src',user.user_pic).show();
        $('.text-avatar').hide();
-    }
-    // 渲染文本头像
+    } else {
+        // 渲染文本头像
     $('.layui-nav-img').hide();
     $('.text-avatar').html(name[0].toUpperCase()).show();
-}
+
+    }
+    
+};
