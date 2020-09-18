@@ -42,7 +42,5 @@ function renderAvatar(user){
         // 渲染文本头像
     $('.layui-nav-img').hide();
     $('.text-avatar').html(name[0].toUpperCase()).show();
-
-    }
-    
+    }  
 };
